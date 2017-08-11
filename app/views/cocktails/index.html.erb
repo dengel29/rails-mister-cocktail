@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cdn.vox-cdn.com/uploads/chorus_asset/file/3873372/crushed_ice_gabe_fonseca.0.jpg');">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <p>Make a drink. It's on the house.</p>
+  </div>
+</div>
+
+
+    <% @cocktails.each do |cocktail| %>
+        <!-- insert <div class="card"> -->
+      <div class="with-padding col-xs-12 col-sm-3">
+        <%= link_to cocktail_path(cocktail) do  %>
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('#IMAGE_HERE');">
+                <div class="card-category"><%= cocktail.name %></div>
+            <div class="card-description">
+            <h2></h2>
+          </div>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
+
+
+
